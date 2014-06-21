@@ -1,0 +1,21 @@
+---
+layout: page
+title: Essays
+description: Short essays by Joe Norton. Topics range from startups, programming, to the future of humanity.
+h1: Food for thought
+permalink: /essays/
+---
+<div class="row">
+                    <div class="col-md-12">
+                        <p class="lead">Here are some of my short essays:</p>
+							 <ul>
+							  {% for post in site.posts %}
+							    <li>
+							      <a href="{{ post.url }}">{{ post.title }}</a>
+							    </li>
+							  {% endfor %}
+							</ul>
+						<p style="text-align:center;">More to come soon!
+                        </p>
+                    </div>
+</div>

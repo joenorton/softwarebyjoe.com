@@ -1,0 +1,51 @@
+---
+layout: page
+title: RubyRetriever - Ruby Web Crawler & File Harvester
+description: Learn more about the rubygem 'RubyRetriever'. Get started right now! gem install rubyretriever
+permalink: /
+h1: RubyRetriever
+---
+<div class="row"> 
+	<div class="col-md-12" style="margin-top:-40px;">	<a href='http://badge.fury.io/rb/rubyretriever'><img src='https://badge.fury.io/rb/rubyretriever.svg' alt='Gem Version' height='18'></a> &nbsp &nbsp <a href="https://travis-ci.org/joenorton/rubyretriever"><img src="https://travis-ci.org/joenorton/rubyretriever.svg?branch=master" /></a><hr>
+		<p class="lead">An open-source asynchronous ruby web crawler & file harvester<br /><a class="btn btn-large btn-danger" href="https://github.com/joenorton/rubyretriever" style="margin-left:auto;margin-right:auto;color:#fff;font-size:80%;"><i class="fa fa-github"></i> View on GitHub</a></p>
+				<p>
+			<h2>about</h2>
+RubyRetriever is a Web Crawler, Site Mapper, File Harvester & Autodownloader, and all around nice buddy to have around.
+<br /><br />
+RubyRetriever uses aynchronous HTTP requests, thanks to eventmachine and Synchrony fibers, to crawl webpages very quickly.
+<br /><br />
+RubyRetriever does NOT respect robots.txt, and RubyRetriever currently - by default - launches up to 10 parallel GET requests at once. This is a feature, do not abuse it. Use at own risk.</p>
+<p>v1.0 Update 6/07/2014 - Includes major code changes, a lot of bug fixes. Much better in dealing with redirects, and issues with the host changing, etc. Also, added the SEO mode -- which grabs a number of key SEO components from every page on a site. Lastly, this upate was so extensive that I could not ensure backward compatibility -- and thus, this was update 1.0!</p>
+	</div>
+	<div class="col-md-8">
+<h2>getting started</h2>
+		<p style="font-size:120%;"><b> <i class="fa fa-download"></i>  &nbsp Install</b></p>
+		<p class="well"><code>
+			<span style="color:#008080;">$</span> gem install rubyretriever
+		</code></p>
+	</div>
+	<div class="col-md-12">
+		<p style="font-size:120%;"><b> <i class="fa fa-gears"></i>  &nbsp Usage</b></p>
+		<p class="well"><code>
+			<span style="color:#008080;">$</span> rr [MODE FLAG] [OPTIONS] TARGET_URL
+		</code></p><p>Where MODE FLAG is required and is either:</p><p class="well"><code>-s, --sitemap [csv|xml]</code><br /><code>-f, --files FILETYPE (just the file extension)</code><br /><code>-e, --seo</code></p>
+		<p style="font-size:120%;"><b> <i class="fa fa-terminal"></i>  &nbsp CLI Examples</b></p>
+		<p class="well">Sitemap Mode<br /><br />Create a CSV Sitemap of upto 100 URLs found on the target site<br /><code>
+			<span style="color:#008080;">$</span> rr --sitemap csv --progress --limit 1000 http://www.hubspot.com
+		</code><br />or<br /><code>
+			<span style="color:#008080;">$</span> rr -s csv -p -l 100 http://www.hubspot.com
+		</code><br /><br />With this command, rr would go to the target: hubspot.com, and crawl it - in sitemap mode - showing a progress meter the whole time. It will crawl a maximum of 100 pages, and when it is done - it will output a list of all the URLs it found to a csv.</p>
+		<p class="well">File Harvesting Mode<br /><br />Collect all the files on the target site by filetype!<br /><code>
+			<span style="color:#008080;">$</span> rr --files pdf --progress --limit 100 http://www.hubspot.com
+		</code><br />or<br /><code>
+			<span style="color:#008080;">$</span> rr -f pdf -p -l 100 http://www.hubspot.com
+		</code><br /><br />With this command, rr would go to the target: hubspot.com, and crawl it - in file harvestingmode, looking for links to files of filetype: PDF - showing a progress meter the whole time. It will crawl a maximum of 100 pages, and when it is done - it will output a list of all the URLs of PDF's it found during the crawl to a csv. Optionally, we could have rr go ahead and autodownload those files but that would require the -a, --auto flag.</p>
+		<p class="well">SEO Mode<br /><br />Collect important SEO fields for everypage on a site (page title, meta desc., h1, etc.)<br /><code>
+			<span style="color:#008080;">$</span> rr --seo --progress --limit 100 --out cnet-seo http://www.cnet.com
+		</code><br />or<br /><code>
+			<span style="color:#008080;">$</span> rr -e -p -l 100 -o cnet-seo http://www.cnet.com
+		</code><br /><br />This would go to http://www.cnet.com and crawl a max of 100 pages, during which it would be collecting the onpage SEO fields on those pages - currently this means [url, page title, meta description, h1 text, h2 text], and then it would write it out to a csv named cnet-seo.</p>
+		<br />
+				<p style="font-size:120%;"><b> <i class="fa fa-book"></i>  &nbsp Using as a library</b></p><p>Under Construction ...</p>
+	</div> 
+</div>
