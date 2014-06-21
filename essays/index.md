@@ -6,10 +6,10 @@ h1: Food for thought
 permalink: /
 ---
 Here are some of my short essays:
-=================================
+---------------------------------
 
 {% for post in site.posts %}
-* ({{ post.title }})[{{ post.url }}]
+* [{{ post.title }}]({{ post.url }})
 {% endfor %}
 
 More to come soon!
