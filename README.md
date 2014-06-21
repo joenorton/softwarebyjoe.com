@@ -6,7 +6,11 @@ I use [Jekyll](http://github.com/mojombo/jekyll) to generate a static site, and 
 License
 -------
 The following directories and their contents are Copyright Joseph Michael Norton. You may not reuse anything therein without my permission:  
+* about  
+* projects  
+* essays  
+* rubyretriever  
 * _posts  
-* static/images  
+* static/img 
   
 All other directories and files are MIT licensed. Feel free to use the HTML and CSS as you please.
