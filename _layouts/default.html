@@ -5,10 +5,8 @@
     <header class="app-bar promote-layer theme--performance themed--background">
       <div class="app-bar-container">
         <button class="menu"><img src="{{ "/static/img/hamburger.svg" | prepend: site.baseurl }}" alt="Menu"></button>
-        <h1 class="logo">{{ site.title }}</h1>
-        <section class="app-bar-actions">
-        <!-- Put App Bar Buttons Here -->
-        </section>
+        <h1 class="logo"><a href="/">{{ site.title }}</a></h1>
+        
       </div>
     </header>
 
@@ -18,7 +16,7 @@
         <li><a href="/">home</a></li>
         <li><a href="/about/">about</a></li>
         <li><a href="/portfolio/">portfolio</a></li>
-        <li id="blog_link"><a href="/essays/">essays</a></li>
+        <li><a href="/essays/">essays</a></li>
         <li><a href="/contact/">contact</a></li>
       </ul>
     </nav>
