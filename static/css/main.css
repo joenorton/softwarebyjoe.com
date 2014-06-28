@@ -339,9 +339,20 @@ main {
   padding:26px 0 52px;
   color: #fff;
 }
-a.white-links, a.white-links:visited {
-  color: #fff;
-}
-a.white-links:hover {
+a.oj-links, a.oj-links:visited {
   color: #D98218;
+  text-decoration: none;
 }
+a.oj-links:hover {
+  color: #D98218;
+  text-decoration: underline;
+}
+a#page-title, a:visited#page-title {
+  color: #000;
+  text-decoration: none;
+}
+a:hover#page-title {
+  color: #D98218;
+  text-decoration: underline;
+}
+
