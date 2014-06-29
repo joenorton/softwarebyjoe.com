@@ -1,0 +1,2 @@
+RewriteCond %{HTTP_HOST} ^softwarebyjoe.com$
+RewriteRule (.*) http://www.softwarebyjoe.com/$1 [R=301,L] 
