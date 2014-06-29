@@ -16,7 +16,7 @@ body {
 
 body {
   position: relative;
-  font-family: 'Roboto Condensed', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Oxygen', 'Helvetica', 'Arial', sans-serif;
   font-weight: 300;
   background-color: #FFFFFF;
   box-sizing: border-box;
@@ -62,19 +62,19 @@ body {
   color: #fefefe;
   float: none;
   max-width: none;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 60px;
 }
 
 .app-bar .logo a {
   text-decoration: none;
   font-weight: normal;
-  color: #000;
+  color: #fff;
   transition: all 0.4s ease 0s;
 }
 
 .app-bar .logo a:hover {
-  color: #fff;
+  color: #000;
   background: none;
     transition: all 0.4s ease 0s;
 }
@@ -238,7 +238,7 @@ main {
     margin: 0;
     padding: 0;
     line-height: 130px;
-    font-size: 46px;
+    font-size: 50px;
   }
 
   .app-bar-actions {
@@ -355,4 +355,22 @@ a:hover#page-title {
   color: #D98218;
   text-decoration: underline;
 }
-
+a:hover.social-icon-links,
+a:hover#twitter-blue,
+a:hover#linkedin,
+a:hover#gplus,
+a:hover#github-ico {
+  color: #D98218;
+}
+#twitter-blue {
+  color:#55ACEE;
+}
+#linkedin {
+  color:#4875B4;
+}
+#gplus {
+color:#C63D2D;
+}
+#github-ico {
+  color: #fff;
+}
